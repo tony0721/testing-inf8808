@@ -5,7 +5,7 @@ from dash import State
 import helpers
 import pandas as pd
 
-helper = helpers.Helper("../data/spotify_songs.csv")
+helper = helpers.Helper("./data/spotify_songs.csv")
 maxYear = 2019
 minYear = 1970
 
