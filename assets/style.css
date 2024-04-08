@@ -1,0 +1,185 @@
+:root {
+  --spotify-black: #191414;
+  --spotify-green: #1db954;
+  --spotify-light-green: #1ed760;
+  --spotify-dark-green: #128748;
+  --spotify-red: #e22128;
+  --spotify-light-grey: #b3b3b3;
+  --spotify-dark-grey: #282828;
+  --spotify-white: #ffffff;
+}
+
+@font-face {
+  font-family: "SpotifyFont";
+  src: url("fonts/Metropolis-SemiBold.otf");
+}
+
+body {
+  background-color: var(--spotify-black);
+}
+
+#viz4 {
+  padding: 5px;
+}
+
+.flex-container-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.column {
+  display: block;
+  flex-direction: column;
+}
+
+#decade-text {
+  font-family: "SpotifyFont", sans-serif;
+  font-size: 4em;
+  font-weight: bold;
+  margin: 0;
+  color: var(--spotify-light-green);
+}
+
+.title {
+  margin-top: 0;
+  font-family: "SpotifyFont", sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+  color: var(--spotify-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.incontournable-text {
+  font-family: "SpotifyFont", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+  color: var(--spotify-white);
+}
+
+.star-icon {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.centered-table {
+  display: flex;
+  justify-content: center;
+}
+
+/* For the timeline */
+.timeline-container {
+  position: relative;
+  width: 50%;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.timeline-item {
+  font-family: "SpotifyFont", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  padding-left: 20px;
+  color: var(--spotify-white);
+  background-color: var(--spotify-dark-grey);
+  border-bottom: 1px solid #aaa;
+}
+
+.timeline-year {
+  color: var(--spotify-light-green);
+  position: absolute;
+  /* left: -40px;  */
+  font-weight: bold;
+  width: 40px;
+  text-align: center;
+  z-index: 1;
+}
+
+.timeline-song {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 1.6em;
+}
+
+/* For the recommendations */
+.recommendations-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recommendation {
+  font-family: "SpotifyFont", sans-serif;
+  display: inline-block;
+  padding: 20px 40px;
+  margin: 10px;
+  border-radius: 50px;
+  background-color: var(--spotify-green);
+  color: var(--spotify-white);
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recommendations-column {
+  width: 25;
+}
+
+.generate-decade-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--spotify-green);
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.decade-button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.transparent-star {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.timeline-song[title]:hover:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  min-width: 200px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--spotify-green);
+  color: var(--spotify-white);
+  padding: 20px;
+  z-index: 2;
+  align-items: center;
+}
